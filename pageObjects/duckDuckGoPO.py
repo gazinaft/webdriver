@@ -6,6 +6,9 @@ class DuckDuckGoPO(PO):
     def open(self):
         self.driver.get('https://duckduckgo.com/')
 
+    def get_title(self):
+        return self.driver.title
+
     def search(self, query):
         searchbar = self.find_elem('[id=search_form_input_homepage]')
         searchbar.send_keys(query)
