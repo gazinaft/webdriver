@@ -3,7 +3,7 @@ from behave import *
 @given('I prefer DuckDuckGo to Google')
 def step_impl(context):
     context.duckduckgo.open()
-    assert context.duckduckgo.get_title.__contains__('DuckDuckGo')
+    assert context.duckduckgo.get_title().__contains__('DuckDuckGo')
 
 @given('want to read {title} quickly')
 def step_impl(context, title):

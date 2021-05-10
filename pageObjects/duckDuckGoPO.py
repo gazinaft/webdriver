@@ -1,5 +1,6 @@
 from pageObjects.basePO import PO
 from selenium.webdriver.common.keys import Keys
+import time
 
 class DuckDuckGoPO(PO):
     
@@ -15,5 +16,6 @@ class DuckDuckGoPO(PO):
         searchbar.send_keys(Keys.ENTER)
 
     def open_briefly(self):
-        ref = self.find_elem("a[href^='https://briefly.ru']")
+        time.sleep(2)
+        ref = self.driver.find_element_by_css_selector('a.js-result-title-link[href^="https://briefly"]')
         ref.click()
