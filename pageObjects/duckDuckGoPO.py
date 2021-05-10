@@ -16,6 +16,5 @@ class DuckDuckGoPO(PO):
         searchbar.send_keys(Keys.ENTER)
 
     def open_briefly(self):
-        time.sleep(2)
         ref = self.driver.find_element_by_css_selector('a.js-result-title-link[href^="https://briefly"]')
         ref.click()

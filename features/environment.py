@@ -7,6 +7,7 @@ from pageObjects.duckDuckGoPO import DuckDuckGoPO
 def browser_firefox(context):
 
     browser = webdriver.Firefox()
+    browser.implicitly_wait(2)
     context.duckduckgo = DuckDuckGoPO(browser)
     context.briefly = BrieflyPO(browser)
 
